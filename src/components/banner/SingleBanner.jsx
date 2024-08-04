@@ -1,0 +1,17 @@
+import React from "react";
+import data from "../../assets/3.webp";
+const SingleBanner = ({ image }) => {
+  return (
+    <div className="mb-2 w-full my-3">
+      <img
+        src={image || data}
+        alt="single-banner"
+        height="2000"
+        width="2000"
+        className="w-full md:h-[400px] min-h-[200px] object-contain"
+      />
+    </div>
+  );
+};
+
+export default SingleBanner;
