@@ -1,6 +1,5 @@
-// AppRoutes.js
 import React from "react";
-import { BrowserRouter, Route, Router, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 import AboutPage from "../AboutPage";
 import ContactPage from "../ContactPage";
@@ -22,6 +21,7 @@ import AdminPanel from "../../Admin/Admin";
 import CartPage from "../CartPage";
 import Checkout from "./Checkout";
 import NewContact from "../NewContact";
+
 const AppRoutes = () => {
   return (
     <BrowserRouter>
@@ -31,8 +31,6 @@ const AppRoutes = () => {
           <Route path="/wishlist" element={<Wishlisttab />} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="/new-contact" element={<NewContact />} />
-          {/* <Route path="/contact-us" element={<ContactPage />} /> */}
-          <Route path="/search" element={<SearchPage />} />
           <Route path="/search" element={<SearchPage />} />
           <Route path="/mylearning" element={<MyLearning />} />
           <Route path="/coursedetail" element={<CourseDetailPage />} />
@@ -46,7 +44,7 @@ const AppRoutes = () => {
           <Route path="/cart" element={<CartPage />} />
           <Route path="/checkout" element={<Checkout />} />
           <Route path="*" element={<PageNotFound />} />
-           <Route path="/admin" element={<AdminPanel />} />
+          <Route path="/admin" element={<AdminPanel />} />
         </Routes>
       </Layout>
     </BrowserRouter>
