@@ -1,6 +1,5 @@
-// AppRoutes.js
 import React from "react";
-import { BrowserRouter, Route, Router, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 import AboutPage from "../AboutPage";
 import ContactPage from "../ContactPage";
@@ -21,6 +20,8 @@ import Wishlisttab from "../../components/wishlisttab/Wishlisttab";
 import AdminPanel from "../../Admin/Admin";
 import CartPage from "../CartPage";
 import Checkout from "./Checkout";
+import NewContact from "../NewContact";
+
 const AppRoutes = () => {
   return (
     <BrowserRouter>
@@ -29,8 +30,7 @@ const AppRoutes = () => {
           <Route path="/" element={<HomePage />} />
           <Route path="/wishlist" element={<Wishlisttab />} />
           <Route path="/about" element={<AboutPage />} />
-          <Route path="/contact" element={<ContactPage />} />
-          <Route path="/search" element={<SearchPage />} />
+          <Route path="/new-contact" element={<NewContact />} />
           <Route path="/search" element={<SearchPage />} />
           <Route path="/mylearning" element={<MyLearning />} />
           <Route path="/coursedetail" element={<CourseDetailPage />} />
@@ -44,7 +44,7 @@ const AppRoutes = () => {
           <Route path="/cart" element={<CartPage />} />
           <Route path="/checkout" element={<Checkout />} />
           <Route path="*" element={<PageNotFound />} />
-           <Route path="/admin" element={<AdminPanel />} />
+          <Route path="/admin" element={<AdminPanel />} />
         </Routes>
       </Layout>
     </BrowserRouter>

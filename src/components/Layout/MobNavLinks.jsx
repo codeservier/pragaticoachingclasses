@@ -15,8 +15,8 @@ const MobNavLinks = () => {
   };
 
   return (
-    <header className="bg-white w-full top-0 fixed shadow-md px-6 py-3 text-black font-medium lg:px-14 z-50">
-      <div className="container mx-auto flex justify-between items-center">
+    <header className="fixed top-0 z-50 w-full px-6 py-3 font-medium text-black bg-white shadow-md lg:px-14">
+      <div className="container flex items-center justify-between mx-auto">
         <div className="text-lg font-bold h-[80px] w-[80px] rounded-[40px] border border-black">
           <a href="/">
             <img
@@ -27,7 +27,7 @@ const MobNavLinks = () => {
           </a>
         </div>
 
-        <nav className="hidden md:flex space-x-4 font-bold items-center">
+        <nav className="items-center hidden space-x-4 font-bold md:flex">
           <div>
             <NavLinks />
           </div>
@@ -40,7 +40,7 @@ const MobNavLinks = () => {
           <a href="/about" className="hover:text-gray-300">
             About
           </a>
-          <a href="/contact" className="hover:text-gray-300">
+          <a href="/new-contact" className="hover:text-gray-300">
             Contact
           </a>
           <a href="/wishlist" className="hover:text-gray-300">
@@ -73,7 +73,7 @@ const MobNavLinks = () => {
       </div>
 
       {isOpen && (
-        <nav className="md:hidden bg-white shadow-md font-bold">
+        <nav className="font-bold bg-white shadow-md md:hidden">
           <a href="/" className="block px-4 py-2 hover:bg-gray-200">
             Home
           </a>
@@ -83,7 +83,7 @@ const MobNavLinks = () => {
           <a href="/about" className="block px-4 py-2 hover:bg-gray-200">
             About
           </a>
-          <a href="/contact" className="block px-4 py-2 hover:bg-gray-200">
+          <a href="/new-contact" className="block px-4 py-2 hover:bg-gray-200">
             Contact
           </a>
           <a href="/login" className="block px-4 py-2 hover:bg-gray-200">
@@ -98,9 +98,9 @@ const MobNavLinks = () => {
           <>
             <div>
               <div>
-                <h1 className="py-4 pl-7 font-semibold  flex justify-between items-center md:pr-0 pr-5">
+                <h1 className="flex items-center justify-between py-4 pr-5 font-semibold pl-7 md:pr-0">
                   Categories
-                  <span className="text-xl md:mt-1 md:ml-2 inline">
+                  <span className="inline text-xl md:mt-1 md:ml-2">
                     <ion-icon
                       name={`${subHeading ? "chevron-up" : "chevron-down"}`}
                     ></ion-icon>

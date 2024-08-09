@@ -12,8 +12,8 @@ const Header = () => {
   };
 
   return (
-    <header className="bg-white w-full top-0 fixed shadow-md px-6 py-3 text-black font-medium lg:px-14 z-50">
-      <div className="container mx-auto flex justify-between items-center">
+    <header className="fixed top-0 z-50 w-full px-6 py-3 font-medium text-black bg-white shadow-md lg:px-14">
+      <div className="container flex items-center justify-between mx-auto">
         <div className="text-lg font-bold h-[80px] w-[80px] rounded-[40px] border border-black">
           <a href="/">
             <img
@@ -24,7 +24,7 @@ const Header = () => {
           </a>
         </div>
 
-        <nav className="hidden md:flex space-x-4 font-bold items-center">
+        <nav className="items-center hidden space-x-4 font-bold md:flex">
           <div>
             <NavLinks />
           </div>
@@ -37,7 +37,7 @@ const Header = () => {
           <a href="/about" className="hover:text-gray-300">
             About
           </a>
-          <a href="/contact" className="hover:text-gray-300">
+          <a href="/new-contact" className="hover:text-gray-300">
             Contact
           </a>
           {/* <a href="/wishlist" className="hover:text-gray-300">
@@ -46,7 +46,7 @@ const Header = () => {
           <a href="/search" className="hover:text-gray-300">
             <FiSearch className="w-6 h-6 cursor-pointer hover:text-gray-300" />
           </a>
-          <a href="/cart" className="block px-4 py-2  ">
+          <a href="/cart" className="block px-4 py-2 ">
             <FaCartPlus className="w-6 h-6 cursor-pointer hover:text-gray-300" />
           </a> */}
         </nav>
@@ -73,7 +73,7 @@ const Header = () => {
       </div>
 
       {isOpen && (
-        <nav className="md:hidden bg-white shadow-md font-bold">
+        <nav className="font-bold bg-white shadow-md md:hidden">
           <a href="/" className="block px-4 py-2 hover:bg-gray-200">
             Home
           </a>
@@ -83,7 +83,7 @@ const Header = () => {
           <a href="/about" className="block px-4 py-2 hover:bg-gray-200">
             About
           </a>
-          <a href="/contact" className="block px-4 py-2 hover:bg-gray-200">
+          <a href="/new-contact" className="block px-4 py-2 hover:bg-gray-200">
             Contact
           </a>
           <a href="/login" className="block px-4 py-2 hover:bg-gray-200">
