@@ -29,7 +29,7 @@ const AppRoutes = () => {
           <Route path="/" element={<HomePage />} />
           <Route path="/wishlist" element={<Wishlisttab />} />
           <Route path="/about" element={<AboutPage />} />
-          <Route path="/contact" element={<ContactPage />} />
+          <Route path="/contact-us" element={<ContactPage />} />
           <Route path="/search" element={<SearchPage />} />
           <Route path="/search" element={<SearchPage />} />
           <Route path="/mylearning" element={<MyLearning />} />
