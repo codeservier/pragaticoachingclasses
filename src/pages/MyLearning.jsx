@@ -1,9 +1,9 @@
 import React, { useEffect, useState, useRef } from "react";
 import Card from "../components/card/Card";
-import image1 from "../assets/c1.jpg";
-import image2 from "../assets/c2.jpg";
-import image3 from "../assets/c3.jpg";
-import image4 from "../assets/c4.jpg";
+import image1 from "../assets/3.1.png";
+import image2 from "../assets/3.2.png";
+import image3 from "../assets/3.3.png";
+import image4 from "../assets/3.4.png";
 import image5 from "../assets/c5.jpg";
 import image6 from "../assets/c6.jpg";
 import Loader from "../components/loader/Loader";
