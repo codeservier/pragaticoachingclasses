@@ -21,6 +21,7 @@ import Wishlisttab from "../../components/wishlisttab/Wishlisttab";
 import AdminPanel from "../../Admin/Admin";
 import CartPage from "../CartPage";
 import Checkout from "./Checkout";
+import NewContact from "../NewContact";
 const AppRoutes = () => {
   return (
     <BrowserRouter>
@@ -29,7 +30,8 @@ const AppRoutes = () => {
           <Route path="/" element={<HomePage />} />
           <Route path="/wishlist" element={<Wishlisttab />} />
           <Route path="/about" element={<AboutPage />} />
-          <Route path="/contact-us" element={<ContactPage />} />
+          <Route path="/new-contact" element={<NewContact />} />
+          {/* <Route path="/contact-us" element={<ContactPage />} /> */}
           <Route path="/search" element={<SearchPage />} />
           <Route path="/search" element={<SearchPage />} />
           <Route path="/mylearning" element={<MyLearning />} />
