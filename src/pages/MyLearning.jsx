@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import Card from "../components/card/Card";
 import image1 from "../assets/c1.jpg";
 import image2 from "../assets/c2.jpg";
@@ -7,10 +7,16 @@ import image4 from "../assets/c4.jpg";
 import image5 from "../assets/c5.jpg";
 import image6 from "../assets/c6.jpg";
 import Loader from "../components/loader/Loader";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
+
 const MyLearning = () => {
   const navigate = useNavigate();
-  const cardsData = [
+  const location = useLocation();
+
+  const coursesRef = useRef(null);
+  const techCoursesRef = useRef(null);
+
+  const coursesData = [
     {
       title: "IIT JEE",
       description: "1000+ Hours of live Classes will be live on the PW app",
@@ -27,7 +33,9 @@ const MyLearning = () => {
         "This Batch is for NDA aspirants Targeting the NDA 1, 2025 Exam",
       image: image4,
     },
+  ];
 
+  const techCoursesData = [
     {
       title: "Defence",
       description: "1000+ Hours of live Classes will be live on the PW app",
@@ -45,30 +53,71 @@ const MyLearning = () => {
       image: image1,
     },
   ];
+
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    setTimeout(() => {
+    // Simulate loading
+    const timer = setTimeout(() => {
       setLoading(false);
     }, 2000);
+
+    return () => clearTimeout(timer);
   }, []);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      if (location.state?.courseType === "ourCourses" && coursesRef.current) {
+        const top = coursesRef.current.getBoundingClientRect().top + window.pageYOffset;
+        window.scrollTo({ top: top - 150, behavior: "smooth" });
+      } else if (location.state?.courseType === "techCourses" && techCoursesRef.current) {
+        const top = techCoursesRef.current.getBoundingClientRect().top + window.pageYOffset;
+        window.scrollTo({ top: top - 150, behavior: "smooth" });
+      }
+    }, 100);
+
+    return () => clearTimeout(timer);
+  }, [location]);
+
   const handleCardClick = (id) => {
     navigate(`/coursedetail`);
   };
+
   return (
     <>
-      {loading ? (
+      {false ? (
         <div className="min-h-[80vh] flex items-center justify-center">
           <Loader />
         </div>
       ) : (
         <div className="max-w-screen-xl mx-auto p-2">
           <div className="container mx-auto p-4 my-4">
-            <h1 className="text-2xl font-medium text-[#800020] text-400  mb-4">
-              My Learning
+            <h1
+              ref={coursesRef}
+              className="text-2xl font-medium text-[#800020] mb-4"
+            >
+              Our Courses
             </h1>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-              {cardsData.map((card, index) => (
+              {coursesData.map((card, index) => (
+                <Card
+                  key={index}
+                  title={card.title}
+                  description={card.description}
+                  image={card.image}
+                  onClick={() => handleCardClick()}
+                />
+              ))}
+            </div>
+
+            <h1
+              ref={techCoursesRef}
+              className="text-2xl font-medium text-[#800020] mt-8 mb-4"
+            >
+              Tech Courses
+            </h1>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+              {techCoursesData.map((card, index) => (
                 <Card
                   key={index}
                   title={card.title}

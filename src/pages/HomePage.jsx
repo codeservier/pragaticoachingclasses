@@ -11,14 +11,14 @@ import Loader from "../components/loader/Loader";
 export const HomePage = () => {
   const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
-    setTimeout(() => {
-      setLoading(false);
-    }, 2000);
-  }, []);
+  // useEffect(() => {
+  //   setTimeout(() => {
+  //     setLoading(false);
+  //   }, 100);
+  // }, []);
   return (
     <>
-      {loading ? (
+      {false ? (
         <div className="min-h-[80vh] flex items-center justify-center">
           <Loader />
         </div>

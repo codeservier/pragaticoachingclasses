@@ -1,5 +1,5 @@
 import React from "react";
-import data from "../../assets/3.webp";
+import data from "../../assets/3.png";
 const SingleBanner = ({ image }) => {
   return (
     <div className="mb-2 w-full my-3">

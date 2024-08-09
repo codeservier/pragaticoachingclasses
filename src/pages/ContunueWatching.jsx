@@ -1,10 +1,10 @@
 import React from "react";
-import image1 from "../assets/c1.jpg";
-import image2 from "../assets/c2.jpg";
-import image3 from "../assets/c3.jpg";
-import image4 from "../assets/c4.jpg";
-import image5 from "../assets/c5.jpg";
-import image6 from "../assets/c6.jpg";
+import image1 from "../assets/3.png";
+import image2 from "../assets/bp.png";
+import image3 from "../assets/a.png";
+import image4 from "../assets/3.2.png";
+import image5 from "../assets/3.3.png";
+import image6 from "../assets/3.4.png";
 import Card from "../components/card/Card";
 import { useNavigate, useParams } from "react-router-dom";
 
@@ -14,40 +14,40 @@ const ContinueWatching = () => {
   const cardsData = [
     {
       id: 1,
-      title: "NEET",
+      title: "SSC CGL",
       description:
-        "This Batch is for NDA aspirants Targeting the NDA 1, 2025 Exam",
+        "Focused training for SSC CGL, including Quantitative Aptitude, Reasoning, English, and General Awareness.",
       image: image1,
     },
     {
       id: 2,
-      title: "IIT JEE",
-      description: "1000+ Hours of live Classes will be live on the PW app",
+      title: "Bank PO",
+      description: "Preparation for Bank PO exams with focus on Quant, Reasoning, English, and General Awareness.",
       image: image2,
     },
     {
       id: 3,
-      title: "School Preparation",
-      description: "Chapterwise/Topicwise Weekly & Monthly Test On Sunday.",
+      title: "NDA/CDS",
+      description: "Coaching for Defence Services exams, covering Maths, General Ability, and English.",
       image: image3,
     },
     {
       id: 4,
-      title: "Govt Job Exams",
+      title: "TET",
       description:
-        "This Batch is for NDA aspirants Targeting the NDA 1, 2025 Exam",
+        "Preparation for Teacher Eligibility Test, focusing on pedagogy, languages, and subject-specific content.",
       image: image4,
     },
     {
       id: 5,
-      title: "Defence",
-      description: "1000+ Hours of live Classes will be live on the PW app",
+      title: "RBI Grade B",
+      description: "Focused preparation for RBI Grade B, covering Economics, Finance, and general aptitude.",
       image: image5,
     },
     {
       id: 6,
-      title: "CA",
-      description: "Chapterwise/Topicwise Weekly & Monthly Test On Sunday.",
+      title: "RRB NTPC ",
+      description: "Training for RRB NTPC with emphasis on General Awareness, Arithmetic, and Reasoning.",
       image: image6,
     },
   ];
@@ -57,7 +57,7 @@ const ContinueWatching = () => {
   return (
     <div className="container mx-auto p-4 my-4">
       <h1 className="text-2xl font-medium text-[#800020] text-400  mb-4">
-        Continue Watching
+        Popular Courses
       </h1>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
         {cardsData.map((card, index) => (

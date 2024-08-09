@@ -32,7 +32,7 @@ const Header = () => {
             Home
           </a>
           <a href="/mylearning" className="hover:text-gray-300">
-            My Learning
+            Our Courses
           </a>
           <a href="/about" className="hover:text-gray-300">
             About
@@ -40,7 +40,7 @@ const Header = () => {
           <a href="/contact" className="hover:text-gray-300">
             Contact
           </a>
-          <a href="/wishlist" className="hover:text-gray-300">
+          {/* <a href="/wishlist" className="hover:text-gray-300">
             <FaRegHeart className="w-6 h-6 cursor-pointer hover:text-gray-300" />
           </a>
           <a href="/search" className="hover:text-gray-300">
@@ -48,7 +48,7 @@ const Header = () => {
           </a>
           <a href="/cart" className="block px-4 py-2  ">
             <FaCartPlus className="w-6 h-6 cursor-pointer hover:text-gray-300" />
-          </a>
+          </a> */}
         </nav>
 
         <div className="md:hidden">

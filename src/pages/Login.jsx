@@ -1,8 +1,56 @@
-import React from "react";
+import React, { useState } from "react";
 import logo from "../assets/logo.png";
 import ImageSlider from "../components/banner/ImageSlider";
+import { auth } from "../../firebase";
+import { signInWithEmailAndPassword } from "firebase/auth";
+import { useNavigate } from "react-router-dom";
 
 const Login = () => {
+
+  const navigation = useNavigate();
+
+  const [formData, setFormData] = useState({
+    email: "",
+    password: "",
+  });
+  const [errors, setErrors] = useState({});
+
+  const handleInputChange = (e) => {
+    const { id, value } = e.target;
+    setFormData((prevData) => ({
+      ...prevData,
+      [id]: value,
+    }));
+    setErrors((prevErrors) => ({
+      ...prevErrors,
+      [id]: value ? "" : `${id} is required`,
+    }));
+  };
+
+  const handleOnSubmit = async (e) => {
+    e.preventDefault();
+    const { email, password } = formData;
+    const newErrors = {};
+    if (!email) newErrors.email = "Email is required";
+    if (!password) newErrors.password = "Password is required";
+
+    setErrors(newErrors);
+
+    if (Object.keys(newErrors).length > 0) {
+      return;
+    }
+
+    try {
+      await signInWithEmailAndPassword(auth, email, password);
+      console.log("Login successful");
+      alert("Login successful!");
+      navigation('/');
+    } catch (error) {
+      console.error("Error logging in:", error);
+      alert("Something Went Wrong!");
+    }
+  };
+
   return (
     <div className="min-h-screen sm:flex flex-col md:flex-row">
       <div className="md:w-1/2 flex flex-col justify-center items-center bg-blue-50">
@@ -15,25 +63,31 @@ const Login = () => {
         <h2 className="text-2xl font-bold mb-4 md:mb-8 text-center">
           Login here
         </h2>
-        <form className="px-8">
+        <form className="px-8" onSubmit={handleOnSubmit}>
           <div className="grid grid-cols-1 gap-6 mb-6">
             <div className="flex flex-col">
-              <label className="mb-1 font-semibold text-gray-400">Name</label>
+              <label className="mb-1 font-semibold text-gray-400">Email</label>
               <input
-                type="text"
-                placeholder="Please enter your name"
+                id="email"
+                type="email"
+                value={formData.email}
+                onChange={handleInputChange}
+                placeholder="Please enter your registered email"
                 className="px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-blue-500"
               />
+              <span className="text-red-600">{errors.email}</span>
             </div>
             <div className="flex flex-col">
-              <label className="mb-1 font-semibold text-gray-400">
-                Password
-              </label>
+              <label className="mb-1 font-semibold text-gray-400">Password</label>
               <input
+                id="password"
                 type="password"
-                placeholder="Please enter your new password"
+                value={formData.password}
+                onChange={handleInputChange}
+                placeholder="Please enter your password"
                 className="px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-blue-500"
               />
+              <span className="text-red-600">{errors.password}</span>
             </div>
           </div>
           <button
@@ -46,17 +100,17 @@ const Login = () => {
         <div className="mt-6 text-center text-sm md:text-base">
           <p>
             Don't have an Account?{" "}
-            <a href="/register" className="text-[#F68B33]  hover:underline">
+            <a href="/register" className="text-[#F68B33] hover:underline">
               Register
             </a>
           </p>
           <p>
-            By clicking Sign Up, you agree to our{" "}
-            <a href="/terms" className="text-[#F68B33]  hover:underline">
+            By clicking Login, you agree to our{" "}
+            <a href="/terms" className="text-[#F68B33] hover:underline">
               Terms & Conditions
             </a>{" "}
             and{" "}
-            <a href="/privacy" className="text-[#F68B33]  hover:underline">
+            <a href="/privacy" className="text-[#F68B33] hover:underline">
               Privacy Policy
             </a>
             .

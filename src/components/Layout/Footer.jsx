@@ -63,16 +63,16 @@ const Footer = () => {
         <div>
           <h3 className="font-semibold mb-2">Contact Us</h3>
           <ul>
-            <li className="text-gray-400">Email: support@lmsapp.com</li>
-            <li className="text-gray-400">Phone: +123 456 7890</li>
+            <li className="text-gray-400">Email: pccbeniganj@gmail.com</li>
+            <li className="text-gray-400">Phone: +91 9876543210</li>
             <li className="text-gray-400">
-              Address: 123 LMS St, Education City
+              Address: Beniganj Hardoi
             </li>
           </ul>
         </div>
       </div>
       <div className="text-center mt-8">
-        <p>&copy; 2024 Magnite Learning Management Center</p>
+        <p>&copy; 2024 Pragati Coaching Class </p>
       </div>
     </footer>
   );

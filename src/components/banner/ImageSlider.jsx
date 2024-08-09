@@ -20,7 +20,7 @@ const ImageSlider = () => {
   };
 
   return (
-    <Slider {...settings} className="w-full h-full object-cover">
+    <Slider {...settings} className="w-full h-400 object-cover">
       <div>
         <img src={image1} alt="Slide 1" />
       </div>

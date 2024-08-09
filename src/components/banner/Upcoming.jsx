@@ -4,12 +4,12 @@ import React from "react";
 import Slider from "react-slick";
 
 // Import images
-import image1 from "../../assets/1.webp";
-import image2 from "../../assets/2.webp";
-import image3 from "../../assets/3.webp";
-import image4 from "../../assets/4.webp";
-import image5 from "../../assets/1.webp";
-import image6 from "../../assets/2.webp";
+import image1 from "../../assets/1.png";
+import image2 from "../../assets/2.png";
+import image3 from "../../assets/3.png";
+import image4 from "../../assets/4.png";
+import image5 from "../../assets/1.png";
+import image6 from "../../assets/2.png";
 
 export const Upcoming = () => {
   var settings = {
@@ -29,46 +29,46 @@ export const Upcoming = () => {
         Upcoming batches
       </h1>
       <Slider {...settings}>
-        <div>
+        <div className="h-400 w-full object-cover">
           <img
             src={image1}
             alt="Slide 1"
-            className="h-full w-full object-cover"
+            className="h-400 w-full object-cover"
           />
         </div>
-        <div>
+        <div className="h-400 w-full object-cover">
           <img
             src={image2}
             alt="Slide 2"
-            className="h-full w-full object-cover"
+            className="h-400 w-full object-cover"
           />
         </div>
-        <div>
+        <div className="h-500 w-full object-cover">
           <img
             src={image3}
             alt="Slide 3"
-            className="h-full w-full object-cover"
+            className="h-400 w-full object-cover"
           />
         </div>
-        <div>
+        <div className="h-400 w-full object-cover">
           <img
             src={image4}
             alt="Slide 4"
-            className="h-full w-full object-cover"
+            className="h-400 w-full object-cover"
           />
         </div>
-        <div>
+        <div className="h-400 w-full object-cover">
           <img
             src={image5}
             alt="Slide 5"
-            className="h-full w-full object-cover"
+            className="h-400 w-full object-cover"
           />
         </div>
-        <div>
+        <div className="h-400 w-full object-cover">
           <img
             src={image6}
             alt="Slide 6"
-            className="h-full w-full object-cover"
+            className="h-400 w-full object-cover"
           />
         </div>
       </Slider>

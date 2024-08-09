@@ -18,6 +18,7 @@ import Subscription from "../../components/profile/Subscription";
 import PaymentMethod from "../../components/profile/PaymentMethod";
 import PublicProfile from "../../components/profile/PublicProfile";
 import Wishlisttab from "../../components/wishlisttab/Wishlisttab";
+import AdminPanel from "../../Admin/Admin";
 import CartPage from "../CartPage";
 import Checkout from "./Checkout";
 const AppRoutes = () => {
@@ -43,6 +44,7 @@ const AppRoutes = () => {
           <Route path="/cart" element={<CartPage />} />
           <Route path="/checkout" element={<Checkout />} />
           <Route path="*" element={<PageNotFound />} />
+           <Route path="/admin" element={<AdminPanel />} />
         </Routes>
       </Layout>
     </BrowserRouter>

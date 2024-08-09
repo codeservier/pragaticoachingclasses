@@ -1,49 +1,53 @@
 // src/components/TopInstructor.jsx
 import React from "react";
-import image1 from "../assets/c5.jpg";
-import image2 from "../assets/c4.jpg";
-import image3 from "../assets/c5.jpg";
+import image1 from "../assets/sk.png";
+import image2 from "../assets/ak.png";
+import image3 from "../assets/vk.png";
+import image4 from "../assets/ak.png";
+import image5 from "../assets/d.png";
+import image6 from "../assets/v.png";
+
 import Card from "../components/card/Card";
 import TopInstructorCard from "./card/TopInstructorCard";
 
 const TopInstructor = () => {
   const cardsData = [
     {
-      title: "Fred Louis",
-      description: "100+ reviews | 10+ live courses | Mathematics",
+      title: "S.K. Singh",
+      description: "Diploma( Electronics ) | 8+ years exp. |PC Science, Hindi",
       image: image1,
     },
     {
-      title: "Fred Louis",
-      description: "100+ reviews | 10+ live courses | Mathematics",
+      title: "Amit Singh",
+      description: "B.Sc| 6+ years exp. | Math reasoning, English",
       image: image2,
     },
     {
-      title: "Fred Louis",
-      description: "100+ reviews | 10+ live courses | Mathematics",
+      title: "V.K. Singh",
+      description: "B.Sc, M.sc | 5+ years exp. | Mathmetics, Physics",
       image: image3,
     },
     {
-      title: "Fred Louis",
-      description: "100+ reviews | 10+ live courses | Mathematics",
-      image: image3,
+      title: "Abhishek Kumar",
+      description: "B.Tech( CSE ), From IIITV | 4+ years exp. | DSA, Backend",
+      image: image4,
     },
     {
-      title: "Fred Louis",
-      description: "100+ reviews | 10+ live courses | Mathematics",
-      image: image2,
+      title: "Dinesh Kumar",
+      description: "Diploma, B.Tech | 3+ years exp. | Mobile App. Development",
+      image: image5,
     },
     {
-      title: "Fred Louis",
-      description: "100+ reviews | 10+ live courses | Mathematics",
-      image: image1,
+      title: "Vimal Raj",
+      description: "Diploma, B.Tech | 3+ years exp. | Web Development",
+      image: image6,
     },
   ];
 
   return (
     <div className="container mx-auto p-4 my-4">
       <h1 className="text-2xl font-medium text-[#800020] text-400  mb-4">
-        Top instructors
+        Our Instructors
       </h1>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
         {cardsData.map((card, index) => (
