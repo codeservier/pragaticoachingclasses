@@ -1,9 +1,10 @@
 import React, { useState } from "react";
-import { FiAlignJustify } from "react-icons/fi";
+import { FiAlertCircle, FiAlignJustify, FiCrosshair } from "react-icons/fi";
 import logo from "../../assets/logo.png";
 import { FaCartPlus, FaRegHeart } from "react-icons/fa";
 import NavLinks from "./Navlinks";
 import { Link, useNavigate } from "react-router-dom";
+import cross from '../../assets/download.png'
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -47,7 +48,7 @@ const Header = () => {
 
         <div className="md:hidden">
           <button onClick={toggleMenu}>
-            <FiAlignJustify />
+            {!isOpen?<FiAlignJustify />:<img className="w-5" src={cross}/>}
           </button>
         </div>
 
@@ -62,12 +63,12 @@ const Header = () => {
 
       {isOpen && (
         <nav className="font-bold bg-white shadow-md md:hidden">
-          <Link to="/" className="block px-4 py-2 hover:bg-gray-200">Home</Link>
+          <Link  to="/" className="block px-4 py-2 hover:bg-gray-200">Home</Link>
           <Link to="/mylearning" className="block px-4 py-2 hover:bg-gray-200">My Learning</Link>
           <Link to="/about" className="block px-4 py-2 hover:bg-gray-200">About</Link>
-          <Link to="/new-contact" className="block px-4 py-2 hover:bg-gray-200">Contact</Link>
+          <Link  to="/new-contact" className="block px-4 py-2 hover:bg-gray-200">Contact</Link>
           <Link to="/login" className="block px-4 py-2 hover:bg-gray-200">Login</Link>
-          <Link to="/register" className="block px-4 py-2 hover:bg-gray-200">Registration</Link>
+          <Link to="/register"  className="block px-4 py-2 hover:bg-gray-200">Registration</Link>
           {/* Uncomment if needed */}
           {/* <Link to="/search" className="block px-4 py-2 hover:bg-gray-200">
             <FiSearch className="w-6 h-6 cursor-pointer hover:text-gray-300" />
