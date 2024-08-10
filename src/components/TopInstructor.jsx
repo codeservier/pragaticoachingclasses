@@ -3,7 +3,7 @@ import React from "react";
 import image1 from "../assets/sk.png";
 import image2 from "../assets/ak.png";
 import image3 from "../assets/vk.png";
-import image4 from "../assets/ak.png";
+import image4 from "../assets/image.png";
 import image5 from "../assets/d.png";
 import image6 from "../assets/v.png";
 
@@ -14,32 +14,32 @@ const TopInstructor = () => {
   const cardsData = [
     {
       title: "S.K. Singh",
-      description: "Diploma( Electronics ) | 8+ years exp. |PC Science, Hindi",
+      description: "B.SC,B.Ed Polytechnic Diploma (Electronics Engg.) | 8+ Years Exp. |PC Science, Hindi",
       image: image1,
     },
     {
       title: "Amit Singh",
-      description: "B.Sc| 6+ years exp. | Math reasoning, English",
+      description: "M.SC (Math) MDCISM (Computer Diploma) | 10+ Years Exp. | Math reasoning, English",
       image: image2,
     },
     {
       title: "V.K. Singh",
-      description: "B.Sc, M.sc | 5+ years exp. | Mathmetics, Physics",
+      description: "B.SC (Math) Polytechnic Diploma (Electronics Engg.) | 9+ Years Exp.| Mathmetics, Physics",
       image: image3,
     },
     {
       title: "Abhishek Kumar",
-      description: "B.Tech( CSE ), From IIITV | 4+ years exp. | DSA, Backend",
+      description: " B.Tech (CSE) | 6+ Years Exp.| DSA, Backend",
       image: image4,
     },
     {
       title: "Dinesh Kumar",
-      description: "Diploma, B.Tech | 3+ years exp. | Mobile App. Development",
+      description: "B.Tech (CSE) | 3+ Years Exp. | Mobile App. Development",
       image: image5,
     },
     {
       title: "Vimal Raj",
-      description: "Diploma, B.Tech | 3+ years exp. | Web Development",
+      description: "B.Tech (CSE) | 3+ Years Exp. | Web Development",
       image: image6,
     },
   ];

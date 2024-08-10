@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { FiAlertCircle, FiAlignJustify, FiCrosshair } from "react-icons/fi";
-import logo from "../../assets/logo.png";
+import logo from "../../assets/logo1.png";
 import { FaCartPlus, FaRegHeart } from "react-icons/fa";
 import NavLinks from "./Navlinks";
 import { Link, useNavigate } from "react-router-dom";
@@ -16,24 +16,23 @@ const Header = () => {
   return (
     <header className="fixed top-0 z-50 w-full px-6 py-3 font-medium text-black bg-white shadow-md lg:px-14">
       <div className="container flex items-center justify-between mx-auto">
-        <div className="text-lg font-bold h-[80px] w-[80px] rounded-[40px] border border-black">
+        {/* <div className="text-lg font-bold h-[80px] w-[80px] rounded-[40px] border border-black"> */}
           <Link to="/">
             <img
               src={logo}
               alt="Logo"
-              className="bg-cover h-[80px] w-[80px] rounded-[40px] border border-black-700"
+              className="bg-cover h-[70px] w-[250px] "
             />
           </Link>
-        </div>
+        {/* </div> */}
 
-        <nav className="items-center hidden space-x-4 font-bold md:flex">
-          <div>
-            <NavLinks />
-          </div>
+        <nav className="items-center hidden space-x-12 font-bold md:flex">
+          
           <Link to="/" className="hover:text-gray-300">Home</Link>
           <Link to="/mylearning" className="hover:text-gray-300">Our Courses</Link>
-          <Link to="/about" className="hover:text-gray-300">About</Link>
-          <Link to="/new-contact" className="hover:text-gray-300">Contact</Link>
+          <Link to="/about" className="hover:text-gray-300">About Us</Link>
+          <Link to="/new-contact" className="hover:text-gray-300">Contact Us</Link>
+          <Link to="/new-contact" className="hover:text-gray-300">FAQ</Link>
           {/* Uncomment if needed */}
           {/* <Link to="/wishlist" className="hover:text-gray-300">
             <FaRegHeart className="w-6 h-6 cursor-pointer hover:text-gray-300" />

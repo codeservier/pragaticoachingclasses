@@ -24,7 +24,7 @@ export const Upcoming = () => {
   };
 
   return (
-    <div className="  ">
+    <div >
       <h1 className="text-2xl font-medium  px-0 py-4 text-[#800020] text-400  mb-4">
         Upcoming batches
       </h1>
@@ -33,42 +33,42 @@ export const Upcoming = () => {
           <img
             src={image1}
             alt="Slide 1"
-            className="h-400 w-full object-cover rounded-[10px]"
+            className="h-400 w-full object-cover"
           />
         </div>
         <div className="h-400 w-full object-cover">
           <img
             src={image2}
             alt="Slide 2"
-            className="h-400 w-full object-cover rounded-[10px]"
+            className="h-400 w-full object-cover"
           />
         </div>
         <div className="h-500 w-full object-cover">
           <img
             src={image3}
             alt="Slide 3"
-            className="h-400 w-full object-cover rounded-[10px]"
+            className="h-400 w-full object-cover"
           />
         </div>
         <div className="h-400 w-full object-cover">
           <img
             src={image4}
             alt="Slide 4"
-            className="h-400 w-full object-cover rounded-[10px]"
+            className="h-400 w-full object-cover"
           />
         </div>
         <div className="h-400 w-full object-cover">
           <img
             src={image5}
             alt="Slide 5"
-            className="h-400 w-full object-cover rounded-[10px]"
+            className="h-400 w-full object-cover"
           />
         </div>
         <div className="h-400 w-full object-cover">
           <img
             src={image6}
             alt="Slide 6"
-            className="h-400 w-full object-cover rounded-[10px]"
+            className="h-400 w-full object-cover"
           />
         </div>
       </Slider>

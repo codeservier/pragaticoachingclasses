@@ -24,52 +24,51 @@ const Banner = () => {
   };
 
   return (
-    <>
+    <div className="self-center">
       <Slider {...settings}>
-        <div className="px-[1.5%] box-border">
+        <div className="h-400 w-full object-cover">
           <img
             src={image1}
             alt="Slide 1"
-            className="w-full h-auto object-contain rounded-[10px]"
+            className="h-400 w-full object-cover"
           />
         </div>
-        <div className="px-[1.5%] box-border">
+        <div className="h-400 w-full object-cover">
           <img
             src={image2}
             alt="Slide 2"
-            className="w-full h-auto object-contain rounded-[10px]"
+            className="h-400 w-full object-cover"
           />
         </div>
-        <div className="px-[1.5%] box-border">
+        <div className="h-500 w-full object-cover">
           <img
             src={image3}
             alt="Slide 3"
-            className="w-full h-auto object-contain rounded-[10px]"
-          />
+            className="h-400 w-full object-cover"          />
         </div>
-        <div className="px-[1.5%] box-border  ">
+        <div className="h-400 w-full object-cover">
           <img
             src={image4}
             alt="Slide 4"
-            className="w-full h-auto object-contain rounded-[10px] "
+           className="h-400 w-full object-cover"
           />
         </div>
-        <div className="px-[1.5%] box-border">
+        <div className="h-400 w-full object-cover">
           <img
             src={image5}
             alt="Slide 5"
-            className="w-full h-auto object-contain rounded-[10px]"
+            className="h-400 w-full object-cover"
           />
         </div>
-        <div className="px-[1.5%] box-border">
+        <div className="h-400 w-full object-cover">
           <img
             src={image6}
             alt="Slide 6"
-            className="w-full h-auto object-contain rounded-[10px]"
+            className="h-400 w-full object-cover"
           />
         </div>
       </Slider>
-    </>
+    </div>
   );
 };
 

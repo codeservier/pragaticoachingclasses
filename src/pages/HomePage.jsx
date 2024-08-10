@@ -11,11 +11,6 @@ import Loader from "../components/loader/Loader";
 export const HomePage = () => {
   const [loading, setLoading] = useState(true);
 
-  // useEffect(() => {
-  //   setTimeout(() => {
-  //     setLoading(false);
-  //   }, 100);
-  // }, []);
   return (
     <>
       {false ? (
@@ -24,14 +19,14 @@ export const HomePage = () => {
         </div>
       ) : (
         <>
-          <div>
+          <div className="max-w-screen-xl mx-auto px-6  " >
             <Banner />
           </div>
           <div className="max-w-screen-xl mx-auto px-2 ">
             <ContunueWatching />
           </div>
-          <div>
-            <SingleBanner />
+          <div className="max-w-screen-xl mx-auto px-6">
+            <SingleBanner  />
           </div>
           <div className="max-w-screen-xl mx-auto px-6 ">
             <Upcoming />

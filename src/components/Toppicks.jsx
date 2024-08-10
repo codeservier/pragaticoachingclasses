@@ -4,7 +4,7 @@ import image1 from "../assets/Crs.png";
 import image2 from "../assets/TC.png";
 import Card from "../components/card/Card";
 
-const Toppicks = () => {
+const   Toppicks = () => {
   const navigate = useNavigate();
 
   const handleShowMoreClick = (courseType) => {
@@ -13,8 +13,8 @@ const Toppicks = () => {
 
   const cardsData = [
     {
-      title: "Our Courses",
-      description: "By Abhishek Kumar",
+      title: "Academic Courses",
+      description: "By Best Teaching faculty",
       image: image1,
       button: (
         <button
@@ -27,7 +27,7 @@ const Toppicks = () => {
     },
     {
       title: "Tech Courses",
-      description: "By Syed Hasnain",
+      description: "By Tech Faculty",
       image: image2,
       button: (
         <button

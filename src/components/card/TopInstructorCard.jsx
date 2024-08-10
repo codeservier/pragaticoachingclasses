@@ -7,7 +7,7 @@ const TopInstructorCard = ({ title, description, image }) => {
         <img
           src={image}
           alt={title}
-          className="h-[60px] w-[60px] rounded-[30px] object-cover shadow-md"
+          className="h-[64px] w-[64px] rounded-[30px] object-cover shadow-md"
         />
       </div>
 
