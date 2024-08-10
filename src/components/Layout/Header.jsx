@@ -3,8 +3,10 @@ import { FiAlignJustify, FiSearch } from "react-icons/fi";
 import logo from "../../assets/logo.png";
 import { FaCartPlus, FaRegHeart } from "react-icons/fa";
 import NavLinks from "./Navlinks";
+import { useNavigate } from "react-router-dom";
 
 const Header = () => {
+  const navigation = useNavigate();
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -74,30 +76,30 @@ const Header = () => {
 
       {isOpen && (
         <nav className="font-bold bg-white shadow-md md:hidden">
-          <a href="/" className="block px-4 py-2 hover:bg-gray-200">
+          <a onClick={navigation("/")} className="block px-4 py-2 hover:bg-gray-200">
             Home
           </a>
-          <a href="/mylearning" className="block px-4 py-2 hover:bg-gray-200">
+          <a onClick={navigation("/mylearning")}  className="block px-4 py-2 hover:bg-gray-200">
             My Learning
           </a>
-          <a href="/about" className="block px-4 py-2 hover:bg-gray-200">
+          <a onClick={navigation("/about")} className="block px-4 py-2 hover:bg-gray-200">
             About
           </a>
-          <a href="/new-contact" className="block px-4 py-2 hover:bg-gray-200">
+          <a onClick={navigation("/new-contact")}   className="block px-4 py-2 hover:bg-gray-200">
             Contact
           </a>
-          <a href="/login" className="block px-4 py-2 hover:bg-gray-200">
+          <a onClick={navigation("/login")}  className="block px-4 py-2 hover:bg-gray-200">
             Login
           </a>
-          <a href="/register" className="block px-4 py-2 hover:bg-gray-200">
+          <a onClick={navigation("/register")} className="block px-4 py-2 hover:bg-gray-200">
             Registration
           </a>
-          <a href="/search" className="block px-4 py-2 hover:bg-gray-200">
+          {/* <a href="/search" className="block px-4 py-2 hover:bg-gray-200">
             <FiSearch className="w-6 h-6 cursor-pointer hover:text-gray-300" />
           </a>
           <a href="/cart" className="block px-4 py-2 hover:bg-gray-200">
             <FaCartPlus className="w-6 h-6 cursor-pointer hover:text-gray-300" />
-          </a>
+          </a> */}
         </nav>
       )}
     </header>
