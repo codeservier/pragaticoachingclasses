@@ -9,7 +9,7 @@ const Card = ({ title, description, image, onClick, button }) => {
       <img
         src={image}
         alt={title}
-        className="w-full h-32 sm:h-48 object-cover"
+        className="w-full h-32 sm:h-48 object-contained"
       />
       <div className="p-4">
         <h3 className="text-lg font-medium text-[#800020]">{title}</h3>

@@ -26,46 +26,46 @@ const Banner = () => {
   return (
     <>
       <Slider {...settings}>
-        <div>
+        <div className="px-[1.5%] box-border">
           <img
             src={image1}
             alt="Slide 1"
-            className="h-full w-full object-cover"
+            className="w-full h-auto object-contain rounded-[10px]"
           />
         </div>
-        <div>
+        <div className="px-[1.5%] box-border">
           <img
             src={image2}
             alt="Slide 2"
-            className="h-full w-full object-cover"
+            className="w-full h-auto object-contain rounded-[10px]"
           />
         </div>
-        <div>
+        <div className="px-[1.5%] box-border">
           <img
             src={image3}
             alt="Slide 3"
-           className="h-full w-full object-cover"
+            className="w-full h-auto object-contain rounded-[10px]"
           />
         </div>
-        <div>
+        <div className="px-[1.5%] box-border  ">
           <img
             src={image4}
             alt="Slide 4"
-           className="h-full w-full object-cover"
+            className="w-full h-auto object-contain rounded-[10px] "
           />
         </div>
-        <div>
+        <div className="px-[1.5%] box-border">
           <img
             src={image5}
             alt="Slide 5"
-            className="h-full w-full object-cover"
+            className="w-full h-auto object-contain rounded-[10px]"
           />
         </div>
-        <div>
+        <div className="px-[1.5%] box-border">
           <img
             src={image6}
             alt="Slide 6"
-            className="h-full w-full object-cover"
+            className="w-full h-auto object-contain rounded-[10px]"
           />
         </div>
       </Slider>

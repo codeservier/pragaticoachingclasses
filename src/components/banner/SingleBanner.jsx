@@ -2,13 +2,13 @@ import React from "react";
 import data from "../../assets/3.png";
 const SingleBanner = ({ image }) => {
   return (
-    <div className="mb-2 w-full my-3">
+    <div className="px-[2%] box-border">
       <img
         src={image || data}
         alt="single-banner"
         height="2000"
-        width="2000"
-        className="w-full md:h-[400px] min-h-[200px] object-contain"
+        width="1900"
+       className="h-400 w-full object-cover rounded-[10px]"
       />
     </div>
   );
